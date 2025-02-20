@@ -8,30 +8,40 @@ public class MIssingNumbers {
 
 	public static void main(String[] args)
 	{
-		List<Integer> a=new ArrayList<Integer>();
+		ArrayList<Integer> list=new ArrayList<>();
 		
 		
-		a.add(1);
-		a.add(2);
-		a.add(3);
-		a.add(4);
-		a.add(10);
-		a.add(6);
-		a.add(8);
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(10);
+		list.add(6);
+		list.add(8);
 		
 		
-		Collections.sort(a);
-		System.out.println(a);
+		Collections.sort(list);//1,2,3,4,6,8,10
+		System.out.println(list);
 		
-		for(int i=1;i<10;i++)
+		
+		int num=1;
+		
+		for(int i=0;i<list.size();i++)
 		{
-			if(a.equals(i))
+			//System.out.println(num);
+			if(list.get(i)!=num)
 			{
-				System.out.println(a);
+				System.out.println("Missing Number is :"+num);
+				i--;
+				num++;
+				
 			}
 			else
 			{
-				System.out.println("Missing values are: "+i);
+				System.out.println("values which are presernt are: "+num);
+				num++;
+				
+
 			}
 		}
 		
